@@ -1,0 +1,1 @@
+<?php session_start(); function requerido(){ if(!isset($_SESSION['usuario_admin'])){ header('Location: login.php'); exit; } }
