@@ -1,0 +1,1 @@
+<?php require_once 'conexion.php'; require_once 'utilidades.php'; $id=(int)($_GET['id_turno']??0); $pdo->prepare("UPDATE turnos SET estado='confirmado', actualizado_por='publico' WHERE id_turno=?")->execute([$id]); auditar($pdo,'turno','confirmar','Confirmado','publico'); header('Location: turnos.php');
